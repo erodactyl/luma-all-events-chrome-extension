@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Luma: All Events",
+  "version": "1.0.0",
+  "description": "Browse every public Luma event in an area, not just the curated city list.",
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png" },
+  "action": { "default_title": "Show all Luma events", "default_icon": { "16": "icons/16.png", "48": "icons/48.png" } },
+  "background": { "service_worker": "background.js" },
+  "host_permissions": ["https://luma.com/*", "https://lu.ma/*"],
+  "content_scripts": [
+    { "matches": ["https://luma.com/*", "https://lu.ma/*"], "js": ["content.js"], "run_at": "document_idle" }
+  ]
+}
