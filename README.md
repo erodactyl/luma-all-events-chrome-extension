@@ -12,8 +12,6 @@ Mobile browsers (including Brave on Android) don't support extensions.
 1. **[Download the latest version](https://github.com/erodactyl/luma-all-events-chrome-extension/releases/latest)**:
    under **Assets**, click `luma-all-events-<version>.zip`.
 2. Open the downloaded zip to unzip it. You'll get a folder called `luma-all-events`.
-   Move it somewhere permanent, such as your Documents folder: Brave loads the extension
-   from it, so don't delete it.
 3. Copy `brave://extensions` into the address bar and press Enter.
 4. Turn on **Developer mode** with the toggle in the top right.
 5. Click **Load unpacked** and choose the `luma-all-events` folder.
