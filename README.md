@@ -30,7 +30,9 @@ Developers can also clone the repo and load the `extension` folder directly.
 - Click the toolbar icon, or the orange **All events** button on any luma.com page.
 - Pick a city or **Near me**, a radius, and optionally a category. Then filter by text,
   free, open-only or minimum guests, and sort by date or popularity.
-- Open `luma.com/discover#all-events` to jump straight to the list.
+- The list has its own URL (`luma.com/discover#all-events?…`) holding the area and filters,
+  so you can bookmark or share a view. Clicking an event opens it in the same tab; Back
+  returns to the list where you left off.
 
 ## How it works
 
