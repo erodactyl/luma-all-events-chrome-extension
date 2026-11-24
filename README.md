@@ -9,22 +9,23 @@ This browser extension adds a full-screen list of all of them to luma.com.
 Works the same in Chrome, Edge, Arc and other Chromium browsers on desktop.
 Mobile browsers (including Brave on Android) don't support extensions.
 
-1. **Get the code.** On this repo's GitHub page click **Code → Download ZIP** and unzip it,
-   or clone it:
-   ```bash
-   git clone https://github.com/erodactyl/luma-all-events-chrome-extension.git
-   ```
-   Keep the folder somewhere permanent: the browser loads the extension from it.
-2. Open `brave://extensions` in the address bar.
-3. Turn on **Developer mode** (toggle, top right).
-4. Click **Load unpacked** and choose the `extension` folder inside the download
-   (the one containing `manifest.json`).
-5. Optional: click the puzzle-piece icon in the toolbar and pin **Luma: All Events**.
+1. **[Download the latest version](https://github.com/erodactyl/luma-all-events-chrome-extension/releases/latest)**:
+   under **Assets**, click `luma-all-events-<version>.zip`.
+2. Open the downloaded zip to unzip it. You'll get a folder called `luma-all-events`.
+   Move it somewhere permanent, such as your Documents folder: Brave loads the extension
+   from it, so don't delete it.
+3. Copy `brave://extensions` into the address bar and press Enter.
+4. Turn on **Developer mode** with the toggle in the top right.
+5. Click **Load unpacked** and choose the `luma-all-events` folder.
+6. Optional: click the puzzle-piece icon in the toolbar and pin **Luma: All Events**.
 
 Brave may occasionally remind you that developer-mode extensions are enabled; that's expected.
 
-**Updating:** download or `git pull` the latest version, then click the reload ↻ icon on the
-extension's card in `brave://extensions` and refresh any open Luma tabs.
+**Updating:** download the new zip, replace the old `luma-all-events` folder with the new one,
+then click the reload ↻ icon on the extension's card in `brave://extensions` and refresh any
+open Luma tabs.
+
+Developers can also clone the repo and load the `extension` folder directly.
 
 ## Use
 
@@ -41,3 +42,12 @@ which is the query the site's map view uses. It pages through results with a sho
 It relies on Luma's undocumented API, so it may break if they change it.
 
 `luma-all-events.user.js` is the same tool as a userscript (Tampermonkey) or console paste.
+
+## Releasing
+
+Bump `version` in `extension/manifest.json`, then:
+
+```bash
+./scripts/build.sh
+gh release create v<version> dist/luma-all-events-<version>.zip
+```
