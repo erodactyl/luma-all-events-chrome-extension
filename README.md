@@ -4,12 +4,27 @@ Luma's city pages (e.g. luma.com/sf) show a short curated list. The same API, as
 for an area instead of a city, returns every public event there (≈650 vs 39 for SF).
 This browser extension adds a full-screen list of all of them to luma.com.
 
-## Install (Brave, Chrome, Edge, Arc — any Chromium browser)
+## Install in Brave
 
-1. Open `brave://extensions` (or `chrome://extensions`).
-2. Turn on **Developer mode** (top right).
-3. Click **Load unpacked** and choose the `extension` folder.
-4. Pin the orange icon from the puzzle-piece menu if you like.
+Works the same in Chrome, Edge, Arc and other Chromium browsers on desktop.
+Mobile browsers (including Brave on Android) don't support extensions.
+
+1. **Get the code.** On this repo's GitHub page click **Code → Download ZIP** and unzip it,
+   or clone it:
+   ```bash
+   git clone https://github.com/erodactyl/luma-all-events-chrome-extension.git
+   ```
+   Keep the folder somewhere permanent: the browser loads the extension from it.
+2. Open `brave://extensions` in the address bar.
+3. Turn on **Developer mode** (toggle, top right).
+4. Click **Load unpacked** and choose the `extension` folder inside the download
+   (the one containing `manifest.json`).
+5. Optional: click the puzzle-piece icon in the toolbar and pin **Luma: All Events**.
+
+Brave may occasionally remind you that developer-mode extensions are enabled; that's expected.
+
+**Updating:** download or `git pull` the latest version, then click the reload ↻ icon on the
+extension's card in `brave://extensions` and refresh any open Luma tabs.
 
 ## Use
 
